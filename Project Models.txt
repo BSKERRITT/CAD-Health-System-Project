@@ -1,0 +1,39 @@
+Models
+
+1. Patient
+	-> Patient No.
+	-> First Name
+	-> Surname
+	-> Date of Birth
+	-> Address
+	-> Phone No.
+	-> Insurance
+	-> Medical Card
+
+2. Appointment
+	-> Date
+	-> Time
+	-> Doctor
+
+3. Doctor
+	-> Medical No.
+	-> First Name
+	-> Surname
+	-> Phone No.
+	-> Speciality
+
+4. Correspondence
+	-> Hospital Letter
+	-> Sick Note
+
+5. Treatment
+	-> Condition
+	-> Observation
+	-> Perscription
+	-> Referral
+
+6. MedicalCenter 
+	-> Name
+	-> Address
+	-> Phone No.
+	-> Email

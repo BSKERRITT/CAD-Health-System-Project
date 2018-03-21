@@ -1,0 +1,6 @@
+<h1>List of Patients</h1>
+<% @patient.each do |patient| %>
+  <div class="patient-names">
+      <h3><%= patient.first_name %> <%= patient.surname %> <small><%= link_to "Full details", patient %></small></h3>
+  </div>
+<% end %>
