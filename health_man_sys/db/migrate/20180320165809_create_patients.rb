@@ -8,8 +8,10 @@ class CreatePatients < ActiveRecord::Migration[5.1]
       t.string :phone_no
       t.boolean :medical_card
       t.string :medical_insurance
+      t.references :doctor, index: true
 
       t.timestamps
     end
+    add_foreign_key :patients, :doctors
   end
 end

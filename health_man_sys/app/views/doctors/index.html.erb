@@ -1,0 +1,6 @@
+<h1>List of Doctors in this Clinic</h1>
+<% @doctor.each do |doctor| %>
+  <div class="doctor-names">
+      <h3><%= doctor.first_name %> <%= doctor.surname %> <small><%= link_to "Full details", doctor %></small></h3>
+  </div>
+<% end %>

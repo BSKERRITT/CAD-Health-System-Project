@@ -1,38 +1,39 @@
 Models
 
 1. Patient
-	-> Patient No.
 	-> First Name
 	-> Surname
 	-> Date of Birth
 	-> Address
 	-> Phone No.
-	-> Insurance
+	-> Medical Insurance
 	-> Medical Card
 
-2. Appointment
+2. Records
+	-> Appointment Time #foreign key to appointments
+	-> Doctor #foreign key to doctors
+	-> Observation
+	-> Previous Conditions
+	-> Treatments
+	-> Hospital Letter
+	-> Blood Tests
+	-> Sick Note
+	-> Perscription
+	-> Referral
+
+3. Appointment
 	-> Date
 	-> Time
 	-> Doctor
 
-3. Doctor
-	-> Medical No.
+4. Doctor
 	-> First Name
 	-> Surname
+	-> Surjury #foreign key to medical center
 	-> Phone No.
 	-> Speciality
 
-4. Correspondence
-	-> Hospital Letter
-	-> Sick Note
-
-5. Treatment
-	-> Condition
-	-> Observation
-	-> Perscription
-	-> Referral
-
-6. MedicalCenter 
+5. MedicalCenter 
 	-> Name
 	-> Address
 	-> Phone No.

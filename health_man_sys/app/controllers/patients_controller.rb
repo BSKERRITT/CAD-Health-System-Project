@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :find_patient, only: [:show, :edit, :update]
+  before_action :find_patient, only: [:show, :edit, :update, :destroy]
 
   def index
     @patient = Patient.all.order("created_at DESC")
@@ -31,6 +31,11 @@ class PatientsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @patient.destroy
+    redirect_to root_path
   end
 
   private

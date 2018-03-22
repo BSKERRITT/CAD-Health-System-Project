@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HealthManSys</title>
+    <title>Health Management System</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,23 @@
   </head>
 
   <body>
+    <div class="nav">
+      <div class="home">
+        <%= link_to "Home", root_path %>
+      </div>
+      <div class="patient-list">
+        <%= link_to "Patients", patients_path %>
+      </div>
+      <div class="add-patient">
+        <%= link_to "Add Patient", new_patient_path %>
+      </div>
+      <div class="doctor-list">
+        <%= link_to "Doctors", doctors_index_path %>
+      </div>
+      <div class="add-doctor">
+        <%= link_to "Add Doctor", new_doctor_path %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
