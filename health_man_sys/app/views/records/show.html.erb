@@ -1,0 +1,13 @@
+<div class="patient-records">
+  <p><strong>Appointment Date and Time:</strong> <%= @record.appointment_time %></p>
+  <p><strong>Doctor:</strong> <%= @record.doctor %></p>
+  <p><strong>Observations:</strong> <%= @record.observation %></p>
+  <p><strong>Previous Conditions:</strong> <%= @record.previous_condition %></p>
+  <p><strong>Treatments:</strong> <%= @record.treatment %></p>
+  <p><strong>Referral Letters:</strong> <%= @record.referral_letter %></p>
+  <p><strong>Blood Tests:</strong> <%= @record.blood_test %></p>
+  <p><strong>Sick Notes:</strong> <%= @record.sick_note %></p>
+  <p><strong>Perscriptions:</strong> <%= @record.perscription %></p>
+  <small><%= link_to "Back", records_path %> <%= link_to "Edit Record Details", edit_record_path(@record) %></small>
+  <small><%= link_to "Delete Record", record_path(@record), method: :delete, data: { confirm: "Are you sure?" } %></small>
+</div>

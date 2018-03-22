@@ -1,0 +1,30 @@
+<%= form_for @record do |f| %>
+  <%= f.label :appointment_time %><br />
+  <%= f.datetime_local_field :appointment_time %><br />
+  <br />
+  <%= f.label :doctor %><br />
+  <%= f.text_field :doctor %><br />
+  <br />
+  <%= f.label :observation %><br />
+  <%= f.text_area :observation %><br />
+  <br />
+  <%= f.label :previous_condition %><br />
+  <%= f.text_area :previous_condition %><br />
+  <br />
+  <%= f.label :treatment %><br />
+  <%= f.text_area :treatment %><br />
+  <br />
+  <%= f.label :referral_letter %><br />
+  <%= f.text_area :referral_letter %><br />
+  <br />
+  <%= f.label :blood_test %><br />
+  <%= f.check_box :blood_test %><br />
+  <br />
+  <%= f.label :sick_note %><br />
+  <%= f.check_box :sick_note %><br />
+  <br />
+  <%= f.label :perscription %><br />
+  <%= f.text_area :perscription %><br />
+  <br />
+  <%= f.submit %>
+<% end %>

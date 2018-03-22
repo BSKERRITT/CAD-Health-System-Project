@@ -5,6 +5,7 @@
   <p><strong>Phone No.:</strong> <%= @patient.phone_no %></p>
   <p><strong>Medical Card:</strong> <%= @patient.medical_card %></p>
   <p><strong>Medical Insurance:</strong> <%= @patient.medical_insurance %></p>
+  <%= link_to "Show Records", doctor_patient_record_path %>
   <small><%= link_to "Back", patients_path %> <%= link_to "Edit Patient Details", edit_patient_path(@patient) %></small>
   <small><%= link_to "Delete Patient", patient_path(@patient), method: :delete, data: { confirm: "Are you sure?" } %></small>
 </div>
