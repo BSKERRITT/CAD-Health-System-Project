@@ -10,9 +10,12 @@ class CreateRecords < ActiveRecord::Migration[5.1]
       t.boolean :blood_test
       t.text :sick_note
       t.text :perscription
-      t.references :patient, foreign_key: true
+      t.references :patient, index: true
+      t.references :doctor, index: true
 
       t.timestamps
     end
+    add_foreign_key :records, :patients
+    add_foreign_key :records, :doctors
   end
 end

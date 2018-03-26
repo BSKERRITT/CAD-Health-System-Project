@@ -6,7 +6,7 @@ class RecordsController < ApplicationController
   end
 
   def new
-      @record = Record.new
+    @record = Record.new
   end
 
   def create
@@ -20,6 +20,7 @@ class RecordsController < ApplicationController
   end
 
   def show
+    @record = Record.find(params[:id])
   end
 
   def edit
@@ -35,7 +36,7 @@ class RecordsController < ApplicationController
 
   def destroy
     @record.destroy
-    redirect_to @record
+    redirect_to root_path
   end
 
   private
@@ -44,6 +45,6 @@ class RecordsController < ApplicationController
     end
 
     def record_params
-      params.require(:record).permit(:appointment_time, :doctor, :observation, :previous_condition, :treatment, :referral_letter, :blood_test, :sick_note, :perscription)
+      params.require(:record).permit(:appointment_time, :doctor_id, :observation, :previous_condition, :treatment, :referral_letter, :blood_test, :sick_note, :perscription)
     end
 end

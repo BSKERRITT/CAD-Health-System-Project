@@ -7,7 +7,7 @@ Model Associations
 	belongs_to :medical_cente
 
 2. Record
-	has_one :patient
+	belongs_to :patient
 	has_one :appointments
 	has_and_belongs_to_many :doctors
 	belongs_to :medical_center

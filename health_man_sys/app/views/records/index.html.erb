@@ -1,6 +1,4 @@
-<h1>List of Patient: <%= patient.first_name %> <%= patient.surname %> Records</h1>
-<% @patient.each do |patient| %>
-  <div class="patient-names">
-      <h3><%= patient.first_name %> <%= patient.surname %> <small><%= link_to "Full details", patient %></small></h3>
-  </div>
+<h1>Patient Records</h1>
+<% @record.each do |record| %>
+    <h3><%= record.appointment_time %><small><%= link_to "Full details", record %></small></h3>
 <% end %>
